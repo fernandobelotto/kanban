@@ -1,5 +1,5 @@
 import { Box, Flex, FormControl, FormErrorMessage, IconButton, Input, Text, Textarea, VStack } from '@chakra-ui/react'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CardModel } from '../models/card.model'
 import { ArrowBackIcon, ArrowForwardIcon, CheckIcon, DeleteIcon, EditIcon, NotAllowedIcon, SmallAddIcon } from '@chakra-ui/icons'
 import { useAppDispatch, useAppSelector } from '../store'
@@ -11,28 +11,41 @@ type CardProps = {
 }
 
 export default function Card({ data }: CardProps) {
+
     const {
         reset,
         handleSubmit,
         register,
         formState: { errors },
     } = useForm<CardModel>({
-        defaultValues: data
+        defaultValues: data,
     });
+
     const [editMode, setEditMode] = useState(false)
     const { loading } = useAppSelector(state => state.card)
     const dispatch = useAppDispatch()
 
+    useEffect(() => {
+        reset(data)
+    }, [data])
+
     function handleEditMode() {
+        reset()
         setEditMode(!editMode)
     }
 
     function handleNext() {
-
+        if (data.list === Lists.todo)
+            dispatch(updateCard({ id: data.id, card: { ...data, list: Lists.doing } }))
+        if (data.list === Lists.doing)
+            dispatch(updateCard({ id: data.id, card: { ...data, list: Lists.done } }))
     }
 
     function handlePreview() {
-
+        if (data.list === Lists.doing)
+            dispatch(updateCard({ id: data.id, card: { ...data, list: Lists.todo } }))
+        if (data.list === Lists.done)
+            dispatch(updateCard({ id: data.id, card: { ...data, list: Lists.doing } }))
     }
 
     function handleDelete() {
@@ -67,7 +80,7 @@ export default function Card({ data }: CardProps) {
 
     if (editMode) return (
         <>
-            <Box p={5} shadow='lg' rounded='lg' border='1px solid' borderColor='brand.500'>
+            <Box w='260px' p={5} shadow='lg' rounded='lg' border='1px solid' borderColor='brand.500'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <VStack spacing={5}>
                         <FormControl isInvalid={!!errors.title}>
@@ -110,13 +123,13 @@ export default function Card({ data }: CardProps) {
 
     return (
         <>
-            <Box p={5} shadow='lg' rounded='lg' border='1px solid' borderColor='brand.500'>
-                <VStack alignItems='flex-start' spacing={5}>
+            <Box w='260px' p={5} shadow='lg' rounded='lg' border='1px solid' borderColor='brand.500'>
+                <VStack alignItems='flex-start' spacing={5} display='flex' flexWrap='wrap'>
                     <Flex dir='row' justify='space-between' w='100%'>
-                        <Text>{data.title}</Text>
+                        <Text whiteSpace='nowrap' overflow='hidden' textOverflow='ellipsis' fontWeight={600}>{data.title}</Text>
                         <IconButton onClick={handleEditMode} icon={<EditIcon />} aria-label='edit-mode' />
                     </Flex>
-                    <Text>{data.content}</Text>
+                    <Text width='100%' maxH='320' overflowY={'scroll'}>{data.content}</Text>
                     <Flex dir='row' justify='space-between' w='100%'>
                         <IconButton onClick={handlePreview} icon={<ArrowBackIcon />} aria-label='preview' visibility={hideLeft()} />
                         <IconButton onClick={handleDelete} icon={<DeleteIcon />} aria-label='delete' />

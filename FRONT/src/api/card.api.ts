@@ -22,7 +22,7 @@ export class CardApi {
 
   static async updateById(id: string, body: CardModel) {
     const axiosInstance = getInstance()
-    const { data } = await axiosInstance.put(`/cards/${id}`, body);
+    const { data } = await axiosInstance.patch(`/cards/${id}`, body);
     return data;
   }
 }

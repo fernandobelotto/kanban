@@ -11,15 +11,18 @@ type Props = {
 export default function Column({ title, type }: Props) {
 
     const { entities } = useAppSelector(state => state.card)
+
     return (
         <>
-            <Box p={5}>
+            <Box p={5} marginX={5} w='260px'>
                 <VStack>
                     <Heading>{title}</Heading>
                     <Divider />
-                    {entities.filter((card: CardModel) => card.list === type).map((card: CardModel) => {
-                        return (<Card data={card} />)
-                    })}
+                    {entities
+                        .filter((card: CardModel) => card.list === type)
+                        .map((card: CardModel) => {
+                            return (<Card data={card} />)
+                        })}
                 </VStack>
             </Box>
         </>

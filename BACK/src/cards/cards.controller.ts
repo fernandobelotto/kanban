@@ -27,8 +27,7 @@ export class CardsController {
 
   @Patch(":id")
   update(@Param("id") id: string, @Body() updateCardDto: UpdateCardDto) {
-    this.cardsService.update(id, updateCardDto);
-    return updateCardDto;
+    return this.cardsService.update(id, updateCardDto);
   }
 
   @Delete(":id")

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { Lists } from '../constants/lists';
 import { CardModel } from '../models/card.model';
 import { useAppDispatch, useAppSelector } from '../store';
-import { createCard } from "../store/thunks/card.thunk";
+import { createCard, getCards } from "../store/thunks/card.thunk";
 type NewCardProps = {
 
 }
@@ -16,11 +16,16 @@ export default function NewCard({ }: NewCardProps) {
     const {
         handleSubmit,
         register,
+        reset,
         formState: { errors },
     } = useForm<CardModel>();
 
     const onSubmit = (values: CardModel) => {
         dispatch(createCard({ ...values, list: Lists.todo }))
+            .then(() => {
+                dispatch(getCards())
+                reset()
+            })
     }
 
     return (
@@ -42,9 +47,7 @@ export default function NewCard({ }: NewCardProps) {
                                 {errors.title && errors.title.message}
                             </FormErrorMessage>
                         </FormControl>
-
                         <FormControl isInvalid={!!errors.content}>
-
                             <Textarea
                                 placeholder="card content"
                                 {...register("content", {

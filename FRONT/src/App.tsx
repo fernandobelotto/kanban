@@ -1,9 +1,18 @@
 import { Box, Flex, Heading } from "@chakra-ui/react";
-import * as React from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { ColorModeSwitcher } from "./components/ColorModeSwitcher";
 import Columns from "./components/Columns";
+import { getCards } from "./store/thunks/card.thunk";
 
 export default function App() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(getCards())
+  }, [])
+
   return (
     <>
       <Box fontSize="xl" p='5'>

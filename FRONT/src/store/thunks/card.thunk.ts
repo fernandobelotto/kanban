@@ -9,9 +9,10 @@ export const createCard = createAsyncThunk(
     }
   )
   
+type updateProps = {id: string, card: CardModel}
   export const updateCard = createAsyncThunk(
     'card/updateCard',
-    async ({id, card}: {id: string, card: CardModel}) => {
+    async ({id, card}: updateProps) => {
       return CardApi.updateById(id, card)
     }
   )
