@@ -4,7 +4,7 @@ import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-
+  app.enableCors();
   const config = new DocumentBuilder()
     .setTitle("Lets Kanban")
     .setDescription("API for the kanban project")

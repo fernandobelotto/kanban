@@ -16,8 +16,9 @@ export class CardsService {
     return this.cardRepository.save(createCardDto);
   }
 
-  update(id: string, updateCardDto: UpdateCardDto) {
-    return this.cardRepository.update({ id }, updateCardDto);
+  async update(id: string, updateCardDto: UpdateCardDto) {
+    await this.cardRepository.update({ id }, updateCardDto);
+    return this.cardRepository.find();
   }
 
   async findAll(): Promise<Card[]> {
@@ -25,8 +26,7 @@ export class CardsService {
   }
 
   async remove(id: string) {
-    const response = await this.cardRepository.findOne({ id });
-    this.cardRepository.delete({ id });
-    return response;
+    await this.cardRepository.delete({ id });
+    return this.cardRepository.find();
   }
 }
