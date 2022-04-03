@@ -197,16 +197,19 @@ export default function Card({ data }: CardProps) {
           <Flex dir="row" justify="space-between" w="100%">
             <IconButton
               onClick={handlePreview}
+              isLoading={loading === "pending"}
               icon={<ArrowBackIcon />}
               aria-label="preview"
               visibility={hideLeft()}
             />
             <IconButton
+              isLoading={loading === "pending"}
               onClick={handleDelete}
               icon={<DeleteIcon />}
               aria-label="delete"
             />
             <IconButton
+              isLoading={loading === "pending"}
               onClick={handleNext}
               icon={<ArrowForwardIcon />}
               aria-label="next"
