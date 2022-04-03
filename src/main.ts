@@ -12,6 +12,7 @@ async function bootstrap() {
   app.enableCors();
   app.useGlobalPipes(new ValidationPipe());
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle("Lets Kanban")
     .setDescription("API for the kanban project")
     .setVersion("1.0")
