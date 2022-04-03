@@ -5,7 +5,7 @@ import Card from "./Card";
 
 type Props = {
   title: string;
-  type: "done" | "doing" | "todo";
+  type: string;
 };
 
 export default function Column({ title, type }: Props) {
