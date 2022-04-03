@@ -19,6 +19,7 @@ Main dependencies and tools used in this project:
 4. Redux Toolkit
 5. Axios
 6. React Hook Form
+7. React Markdown
 
 ## Demo
 

@@ -9,6 +9,13 @@
   </a>
 </p>
 
+<p float="left">
+  <img alt="Documentation" src="FRONT/screenshots/home-light.png" width='500'/>
+  <img alt="Documentation" src="FRONT/screenshots/content-light.png" width='500'/>
+  <img alt="Documentation" src="FRONT/screenshots/home-dark.png" width='500'/>
+  <img alt="Documentation" src="FRONT/screenshots/content-dark.png" width='500'/>
+</p>
+
 ## Kanban application
 
 > *FullStack kanban board application made with React and Nestjs, both with typescript.*
