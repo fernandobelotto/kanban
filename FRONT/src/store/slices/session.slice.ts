@@ -16,15 +16,12 @@ const sessionSlice = createSlice({
   name: "session",
   initialState,
   reducers: {
-    setSession(state, action) {
-      state.accessToken = action.payload.accessToken;
-    },
   },
   extraReducers: (builder) => {
     builder
     .addCase(login.fulfilled, (state, action) => {
       state.loading = 'succeeded'
-      state.accessToken =  action.payload.token
+      state.accessToken =  action.payload.access_token
     })
     .addCase(login.pending, (state) => {
       state.loading = 'pending'
@@ -35,6 +32,6 @@ const sessionSlice = createSlice({
   }
 });
 
-export const { setSession } = sessionSlice.actions;
+export const { } = sessionSlice.actions;
 
 export const SessionReducer = sessionSlice.reducer;

@@ -15,7 +15,7 @@ export default function Column({ title, type }: Props) {
     return (
         <>
             <Box p={5} marginX={5} w='260px'>
-                <VStack>
+                <VStack w='260px'>
                     <Heading>{title}</Heading>
                     <Divider />
                     {entities

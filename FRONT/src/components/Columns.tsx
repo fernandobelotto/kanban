@@ -1,8 +1,12 @@
-import { Flex } from '@chakra-ui/react'
+import { Skeleton, Flex } from '@chakra-ui/react'
 import React from 'react'
+import { useAppSelector } from '../store'
 import Column from './Column'
 import NewColumn from './NewColumn'
 export default function Columns() {
+
+
+    const { loading } = useAppSelector(state => state.session)
 
     return (
         <>

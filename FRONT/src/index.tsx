@@ -2,7 +2,7 @@ import { ChakraProvider, ColorModeScript, extendTheme, theme } from "@chakra-ui/
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import App from "./App";
+import App from "./routes/App";
 import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
 import { store } from "./store";

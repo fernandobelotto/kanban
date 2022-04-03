@@ -1,11 +1,11 @@
+import { ArrowBackIcon, ArrowForwardIcon, CheckIcon, DeleteIcon, EditIcon, NotAllowedIcon } from '@chakra-ui/icons'
 import { Box, Flex, FormControl, FormErrorMessage, IconButton, Input, Text, Textarea, VStack } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
-import { CardModel } from '../models/card.model'
-import { ArrowBackIcon, ArrowForwardIcon, CheckIcon, DeleteIcon, EditIcon, NotAllowedIcon, SmallAddIcon } from '@chakra-ui/icons'
-import { useAppDispatch, useAppSelector } from '../store'
-import { createCard, deleteCard, updateCard } from '../store/thunks/card.thunk'
 import { useForm } from 'react-hook-form'
-import { Lists } from '../constants/lists'
+import { Lists } from '../enums/lists.enum'
+import { CardModel } from '../models/card.model'
+import { useAppDispatch, useAppSelector } from '../store'
+import { deleteCard, updateCard } from '../store/thunks/card.thunk'
 type CardProps = {
     data: CardModel
 }
