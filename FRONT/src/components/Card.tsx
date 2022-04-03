@@ -23,6 +23,9 @@ import { Lists } from "../enums/lists.enum";
 import { CardModel } from "../models/card.model";
 import { useAppDispatch, useAppSelector } from "../store";
 import { deleteCard, updateCard } from "../store/thunks/card.thunk";
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 type CardProps = {
   data: CardModel;
 };
@@ -194,9 +197,9 @@ export default function Card({ data }: CardProps) {
               size='sm'
             />
           </Flex>
-          <Text width="100%" maxH="320" overflowY={"scroll"}>
-            {data.content}
-          </Text>
+          <Box width='100%' maxH="320" overflowY={"scroll"}>
+            <ReactMarkdown children={data.content} remarkPlugins={[remarkGfm]} />
+          </Box>
           <Flex dir="row" justify="space-between" w="100%">
             <IconButton
               onClick={handlePreview}
