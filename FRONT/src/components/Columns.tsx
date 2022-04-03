@@ -1,11 +1,9 @@
-import { Skeleton, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { Lists } from "../enums/lists.enum";
-import { useAppSelector } from "../store";
 import Column from "./Column";
 import NewColumn from "./NewColumn";
 export default function Columns() {
-  const { loading } = useAppSelector((state) => state.session);
 
   return (
     <>

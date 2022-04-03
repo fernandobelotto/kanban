@@ -6,7 +6,6 @@ import {
   deleteCard,
   getCards,
 } from "../thunks/card.thunk";
-import cards from "../../mock/cards.json";
 
 type InitialStateType = {
   entities: CardModel[];

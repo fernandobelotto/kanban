@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Heading } from "@chakra-ui/react";
+import { Box, Container, Flex, Heading, useColorMode } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { ColorModeSwitcher } from "../components/ColorModeSwitcher";
@@ -17,11 +17,11 @@ export default function App() {
     if (accessToken) {
       dispatch(getCards());
     }
-  }, [accessToken]);
+  }, [accessToken, dispatch]);
 
   useEffect(() => {
     dispatch(login(loginConfig));
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

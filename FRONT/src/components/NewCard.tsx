@@ -13,8 +13,8 @@ import { Lists } from "../enums/lists.enum";
 import { CardModel } from "../models/card.model";
 import { useAppDispatch, useAppSelector } from "../store";
 import { createCard, getCards } from "../store/thunks/card.thunk";
-type NewCardProps = {};
-export default function NewCard({}: NewCardProps) {
+
+export default function NewCard() {
   const dispatch = useAppDispatch();
   const { loading } = useAppSelector((state) => state.card);
 

@@ -1,4 +1,4 @@
-import { Injectable } from "@nestjs/common";
+import { Injectable, Logger } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { Repository } from "typeorm";
 import { CreateCardDto } from "./dto/create-card.dto";
@@ -12,12 +12,15 @@ export class CardsService {
     private cardRepository: Repository<Card>
   ) {}
 
+  private readonly logger = new Logger(CardsService.name);
+
   create(createCardDto: CreateCardDto) {
     return this.cardRepository.save(createCardDto);
   }
 
   async update(id: string, updateCardDto: UpdateCardDto) {
     await this.cardRepository.update({ id }, updateCardDto);
+    this.logger.log(`Card ${id} - ${updateCardDto.title} - Atualizado`);
     return this.cardRepository.find();
   }
 
@@ -27,6 +30,7 @@ export class CardsService {
 
   async remove(id: string) {
     await this.cardRepository.delete({ id });
+    this.logger.log(`Card ${id} - removido`);
     return this.cardRepository.find();
   }
 }

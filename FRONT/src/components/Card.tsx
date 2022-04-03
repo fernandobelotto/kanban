@@ -43,7 +43,7 @@ export default function Card({ data }: CardProps) {
 
   useEffect(() => {
     reset(data);
-  }, [data]);
+  }, [data, reset]);
 
   function handleEditMode() {
     reset();
@@ -146,12 +146,14 @@ export default function Card({ data }: CardProps) {
                   onClick={handleCancel}
                   icon={<NotAllowedIcon />}
                   aria-label="cancel"
+                  size='sm'
                 />
                 <IconButton
                   isLoading={loading === "pending"}
                   type="submit"
                   icon={<CheckIcon />}
                   aria-label="save"
+                  size='sm'
                 />
               </Flex>
             </VStack>
@@ -189,6 +191,7 @@ export default function Card({ data }: CardProps) {
               onClick={handleEditMode}
               icon={<EditIcon />}
               aria-label="edit-mode"
+              size='sm'
             />
           </Flex>
           <Text width="100%" maxH="320" overflowY={"scroll"}>
@@ -201,12 +204,14 @@ export default function Card({ data }: CardProps) {
               icon={<ArrowBackIcon />}
               aria-label="preview"
               visibility={hideLeft()}
+              size='sm'
             />
             <IconButton
               isLoading={loading === "pending"}
               onClick={handleDelete}
               icon={<DeleteIcon />}
               aria-label="delete"
+              size='sm'
             />
             <IconButton
               isLoading={loading === "pending"}
@@ -214,6 +219,7 @@ export default function Card({ data }: CardProps) {
               icon={<ArrowForwardIcon />}
               aria-label="next"
               visibility={hideRight()}
+              size='sm'
             />
           </Flex>
         </VStack>
