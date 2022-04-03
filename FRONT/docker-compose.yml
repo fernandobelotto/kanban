@@ -1,6 +1,7 @@
 version: "3.8"
 services:
   print:
+    container_name: frontend
     stdin_open: true
     build:
       context: .

@@ -39,6 +39,18 @@ if you like using postman you can checkout a public collection that i made for t
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16002553-2a8a08a6-3813-4663-8dbd-3588df467d4d?action=collection%2Ffork&collection-url=entityId%3D16002553-2a8a08a6-3813-4663-8dbd-3588df467d4d%26entityType%3Dcollection%26workspaceId%3Dcee52d25-4064-44ab-a675-67e1ec38a5d3)
 
 
+## Running the project
+
+If you have docker installed in yout machine, you can run the entire project running
+
+```sh
+docker-compose up
+```
+
+this will spin up the frontend at localhost:30000 and the backend at localhost:5000
+
+you can run each project separately using docker or npm
+
 ### Fernando Belotto
 
 - Website: https://fernandobelotto.dev
