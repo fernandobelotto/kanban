@@ -1,8 +1,9 @@
 import { Module } from "@nestjs/common";
-import { CardsModule } from "./cards/cards.module";
-import { SequelizeModule } from "@nestjs/sequelize";
-import { Card } from "./cards/models/card.model";
 import { TypeOrmModule } from "@nestjs/typeorm";
+import { CardsModule } from "./cards/cards.module";
+import { Card } from "./cards/models/card.model";
+import { AuthModule } from "./auth/auth.module";
+import { ConfigModule } from "@nestjs/config";
 
 @Module({
   imports: [
@@ -13,8 +14,10 @@ import { TypeOrmModule } from "@nestjs/typeorm";
       entities: [Card],
       synchronize: true,
     }),
+    AuthModule,
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
   ],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}
