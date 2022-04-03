@@ -10,10 +10,10 @@
 </p>
 
 <p float="left">
-  <img alt="Documentation" src="FRONT/screenshots/home-light.png" width='500'/>
-  <img alt="Documentation" src="FRONT/screenshots/content-light.png" width='500'/>
-  <img alt="Documentation" src="FRONT/screenshots/home-dark.png" width='500'/>
-  <img alt="Documentation" src="FRONT/screenshots/content-dark.png" width='500'/>
+  <img alt="Documentation" src="FRONT/screenshots/home-light.png" width='400'/>
+  <img alt="Documentation" src="FRONT/screenshots/content-light.png" width='400'/>
+  <img alt="Documentation" src="FRONT/screenshots/home-dark.png" width='400'/>
+  <img alt="Documentation" src="FRONT/screenshots/content-dark.png" width='400'/>
 </p>
 
 ## Kanban application
