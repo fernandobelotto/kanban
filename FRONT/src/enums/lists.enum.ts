@@ -1,5 +1,5 @@
 export enum Lists {
-    todo = 'todo',
-    doing = 'doing',
-    done = 'done',
+  todo = "todo",
+  doing = "doing",
+  done = "done",
 }

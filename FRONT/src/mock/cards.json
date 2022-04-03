@@ -1,26 +1,26 @@
 [
-    {
-        "title": "Teste 1",
-        "content": "Cupidatat qui laborum dolor aliquip aute irure.",
-        "id": "215df409-7829-464e-a302-bcdcfe0ea7e2",
-        "list": "doing"
-    },
-    {
-        "title": "Teste 2",
-        "content": "Cupidatat qui laborum dolor aliquip aute irure.",
-        "id": "215df40as9-7829-464e-a302-bcdcfe0ea7e2",
-        "list": "todo"
-    },
-    {
-        "title": "Teste 3",
-        "content": "Cupidatat qui laborum dolor aliquip aute irure.",
-        "id": "215df409-782239-464e-a302-bcdcfe0ea7e2",
-        "list": "done"
-    },
-    {
-        "title": "Teste 4",
-        "content": "Cupidatat qui laborum dolor aliquip aute irure.",
-        "id": "215df4aasdf9-7829-464e-a302-bcdcfe0ea7e2",
-        "list": "todo"
-    }
+  {
+    "title": "Teste 1",
+    "content": "Cupidatat qui laborum dolor aliquip aute irure.",
+    "id": "215df409-7829-464e-a302-bcdcfe0ea7e2",
+    "list": "doing"
+  },
+  {
+    "title": "Teste 2",
+    "content": "Cupidatat qui laborum dolor aliquip aute irure.",
+    "id": "215df40as9-7829-464e-a302-bcdcfe0ea7e2",
+    "list": "todo"
+  },
+  {
+    "title": "Teste 3",
+    "content": "Cupidatat qui laborum dolor aliquip aute irure.",
+    "id": "215df409-782239-464e-a302-bcdcfe0ea7e2",
+    "list": "done"
+  },
+  {
+    "title": "Teste 4",
+    "content": "Cupidatat qui laborum dolor aliquip aute irure.",
+    "id": "215df4aasdf9-7829-464e-a302-bcdcfe0ea7e2",
+    "list": "todo"
+  }
 ]

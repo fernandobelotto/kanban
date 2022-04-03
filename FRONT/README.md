@@ -1,59 +1,62 @@
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">Let's Kanban UI </h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/fernandobelotto/kanban/wiki/Documentation" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="#" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-## Available Scripts
+## Frontend project for the kanban application LetsKanban
 
-In the project directory, you can run:
+Main dependencies and tools used in this project:
 
-### `npm start`
+1. Create React App
+2. Typescript
+3. Chakra-UI
+4. Redux Toolkit
+5. Axios
+6. React Hook Form
 
-Runs the app in the development mode.<br /> Open
+## Demo
+
+If you want to check a online version of this project running, access:
+
+[https://letskanban.vercel.app/](https://letskanban.vercel.app/)
+
+## Install
+
+this will install all the dependencies for this react project
+
+```sh
+npm install
+```
+
+## Usage
+
+After the dependecies been installed, you can run
+
+```sh
+npm run start
+```
+
+witch runs the app in the development mode.<br /> Open
 [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br /> You will also see any lint errors
-in the console.
+## Docker
 
-### `npm test`
+If you have docker installed on your machine, you can also run
 
-Launches the test runner in the interactive watch mode.<br /> See the section
-about
-[running tests](https://facebook.github.io/create-react-app/docs/running-tests)
-for more information.
+```sh
+docker-compose up
+```
 
-### `npm run build`
+which will build and run a image docker with the project
 
-Builds the app for production to the `build` folder.<br /> It correctly bundles
-React in production mode and optimizes the build for the best performance.
+### Fernando Belotto
 
-The build is minified and the filenames include the hashes.<br /> Your app is
-ready to be deployed!
-
-See the section about
-[deployment](https://facebook.github.io/create-react-app/docs/deployment) for
-more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can
-`eject` at any time. This command will remove the single build dependency from
-your project.
-
-Instead, it will copy all the configuration files and the transitive
-dependencies (webpack, Babel, ESLint, etc) right into your project so you have
-full control over them. All of the commands except `eject` will still work, but
-they will point to the copied scripts so you can tweak them. At this point
-you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for
-small and middle deployments, and you shouldn’t feel obligated to use this
-feature. However we understand that this tool wouldn’t be useful if you couldn’t
-customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the
-[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Website: https://fernandobelotto.dev
+- Github: [@fernandobelotto](https://github.com/fernandobelotto)
+- LinkedIn: [@fernandobelotto](https://linkedin.com/in/fernandobelotto)

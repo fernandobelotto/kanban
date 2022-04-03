@@ -1,4 +1,9 @@
-import { ChakraProvider, ColorModeScript, extendTheme, theme } from "@chakra-ui/react";
+import {
+  ChakraProvider,
+  ColorModeScript,
+  extendTheme,
+  theme,
+} from "@chakra-ui/react";
 import * as React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
@@ -7,14 +12,13 @@ import reportWebVitals from "./reportWebVitals";
 import * as serviceWorker from "./serviceWorker";
 import { store } from "./store";
 
-
 const newTheme = extendTheme({
   colors: {
     brand: {
-      500: '#f5b324'
-    }
-  }
-})
+      500: "#f5b324",
+    },
+  },
+});
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -26,7 +30,6 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
-
 
 // TODO: implement offline first experience with data in local storage
 serviceWorker.unregister();

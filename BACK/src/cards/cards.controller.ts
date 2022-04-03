@@ -8,14 +8,21 @@ import {
   Delete,
   UseGuards,
 } from "@nestjs/common";
-import { ApiInternalServerErrorResponse, ApiNotFoundResponse, ApiOkResponse, ApiTags } from "@nestjs/swagger";
+import {
+  ApiBearerAuth,
+  ApiInternalServerErrorResponse,
+  ApiNotFoundResponse,
+  ApiOkResponse,
+  ApiTags,
+} from "@nestjs/swagger";
 import { JwtAuthGuard } from "src/auth/guards/jwt-auth.guard";
 import { CardsService } from "./cards.service";
 import { CreateCardDto } from "./dto/create-card.dto";
 import { UpdateCardDto } from "./dto/update-card.dto";
-import { Card } from "./entities/card.entity";
+import { Card } from "./models/card.model";
 
 @ApiTags("cards")
+@ApiBearerAuth()
 @Controller("cards")
 export class CardsController {
   constructor(private readonly cardsService: CardsService) {}
@@ -25,7 +32,7 @@ export class CardsController {
    */
   @Post()
   @UseGuards(JwtAuthGuard)
-  create(@Body() createCardDto: CreateCardDto) {
+  create(@Body() createCardDto: CreateCardDto): Promise<Card> {
     return this.cardsService.create(createCardDto);
   }
 
