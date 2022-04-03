@@ -27,6 +27,10 @@ And the swagger ui for the api at:
 
 [https://kanban-nestjs.herokuapp.com/api/](https://kanban-nestjs.herokuapp.com/api/)
 
+if you like using postman you can checkout a public collection that i made for this api
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/16002553-2a8a08a6-3813-4663-8dbd-3588df467d4d?action=collection%2Ffork&collection-url=entityId%3D16002553-2a8a08a6-3813-4663-8dbd-3588df467d4d%26entityType%3Dcollection%26workspaceId%3Dcee52d25-4064-44ab-a675-67e1ec38a5d3)
+
 
 ### Fernando Belotto
 
