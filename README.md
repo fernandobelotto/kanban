@@ -9,7 +9,7 @@
   </a>
 </p>
 
-## *Kanban application
+## Kanban application
 
 > *FullStack kanban board application made with React and Nestjs, both with typescript.*
 
